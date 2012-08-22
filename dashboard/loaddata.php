@@ -57,8 +57,7 @@ $grid = new EditableGrid();
 $grid->addColumn('id', 'Project ID', 'string', NULL, false); 
 $grid->addColumn('project_name', 'Project Name', 'string');  
 $grid->addColumn('ps', 'Procurement Specialist', 'string');  
-$grid->addColumn('pcn_date', 'PCN date', 'date');  
-$grid->addColumn('scale_up', 'Scale Up', 'boolean');  
+$grid->addColumn('pcn_date', 'PCN date', 'date');   
                                                                        
 $result = $mysqli->query('SELECT * FROM  LIMIT 100');
 $mysqli->close();
