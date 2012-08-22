@@ -54,18 +54,11 @@ $grid = new EditableGrid();
 *  Add columns. The first argument of addColumn is the name of the field in the databse. 
 *  The second argument is the label that will be displayed in the header
 */
-$grid->addColumn('id', 'ID', 'integer', NULL, false); 
-$grid->addColumn('name', 'Name', 'string');  
-$grid->addColumn('firstname', 'Firstname', 'string');  
-$grid->addColumn('age', 'Age', 'integer');  
-$grid->addColumn('height', 'Height', 'float');  
-/* The column id_country and id_continent will show a list of all available countries and continents. So, we select all rows from the tables */
-$grid->addColumn('id_continent', 'Continent', 'string' , fetch_pairs($mysqli,'SELECT id, name FROM continent'),true);  
-$grid->addColumn('id_country', 'Country', 'string', fetch_pairs($mysqli,'SELECT id, name FROM country'),true );  
-$grid->addColumn('email', 'Email', 'email');                                               
-$grid->addColumn('freelance', 'Freelance', 'boolean');  
-$grid->addColumn('lastvisit', 'Lastvisit', 'date');  
-$grid->addColumn('website', 'Koooky', 'string');  
+$grid->addColumn('id', 'Project ID', 'string', NULL, false); 
+$grid->addColumn('project_name', 'Project Name', 'string');  
+$grid->addColumn('ps', 'Procurement Specialist', 'string');  
+$grid->addColumn('pcn_date', 'PCN date', 'date');  
+$grid->addColumn('scale_up', 'Scale Up', 'boolean');  
                                                                        
 $result = $mysqli->query('SELECT *, date_format(lastvisit, "%d/%m/%Y") as lastvisit FROM demo LIMIT 100');
 $mysqli->close();
