@@ -63,7 +63,7 @@ $grid->addColumn('height', 'Height', 'float');
 $grid->addColumn('id_continent', 'Continent', 'string' , fetch_pairs($mysqli,'SELECT id, name FROM continent'),true);  
 $grid->addColumn('website', 'Koooky', 'string');  
                                                                        
-$result = $mysqli->query('SELECT *, date_format(lastvisit, "%d/%m/%Y") as lastvisit FROM demo LIMIT 100');
+$result = $mysqli->query('SELECT * FROM demo LIMIT 100');
 $mysqli->close();
 
 // send data to the browser
