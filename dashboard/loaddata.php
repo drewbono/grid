@@ -41,7 +41,6 @@ function fetch_pairs($mysqli,$query){
 	return $rows;
 }
 
-
 // Database connection
 $mysqli = mysqli_init();
 $mysqli->options(MYSQLI_OPT_CONNECT_TIMEOUT, 5);
@@ -57,7 +56,7 @@ $grid = new EditableGrid();
 $grid->addColumn('id', 'Project ID', 'string', NULL, false); 
 $grid->addColumn('project_name', 'Project Name', 'string');  
                                                                        
-$result = $mysqli->query('SELECT * FROM  LIMIT 100');
+$result = $mysqli->query('SELECT * FROM demo LIMIT 100');
 $mysqli->close();
 
 // send data to the browser
