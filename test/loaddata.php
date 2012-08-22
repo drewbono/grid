@@ -61,10 +61,6 @@ $grid->addColumn('age', 'Age', 'integer');
 $grid->addColumn('height', 'Height', 'float');  
 /* The column id_country and id_continent will show a list of all available countries and continents. So, we select all rows from the tables */
 $grid->addColumn('id_continent', 'Continent', 'string' , fetch_pairs($mysqli,'SELECT id, name FROM continent'),true);  
-$grid->addColumn('id_country', 'Country', 'string', fetch_pairs($mysqli,'SELECT id, name FROM country'),true );  
-$grid->addColumn('email', 'Email', 'email');                                               
-$grid->addColumn('freelance', 'Freelance', 'boolean');  
-$grid->addColumn('lastvisit', 'Lastvisit', 'date');  
 $grid->addColumn('website', 'Koooky', 'string');  
                                                                        
 $result = $mysqli->query('SELECT *, date_format(lastvisit, "%d/%m/%Y") as lastvisit FROM demo LIMIT 100');
