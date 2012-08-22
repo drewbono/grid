@@ -56,7 +56,7 @@ $grid = new EditableGrid();
 $grid->addColumn('id', 'Project ID', 'string', NULL, false); 
 $grid->addColumn('project_name', 'Project Name', 'string');  
                                                                        
-$result = $mysqli->query('SELECT * FROM demo LIMIT 100');
+$result = $mysqli->query('SELECT * FROM project LIMIT 100');
 $mysqli->close();
 
 // send data to the browser
