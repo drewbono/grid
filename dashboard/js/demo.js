@@ -41,7 +41,7 @@ function updateCellValue(editableGrid, rowIndex, columnIndex, oldValue, newValue
 		    highlight(row.id, success ? "ok" : "error"); 
 		},
 		error: function(XMLHttpRequest, textStatus, exception) { echo("Ajax failure\n" + errortext); },
-		async: false
+		async: true
 	});
    
 }
@@ -50,7 +50,7 @@ function updateCellValue(editableGrid, rowIndex, columnIndex, oldValue, newValue
 
 function DatabaseGrid() 
 { 
-	this.editableGrid = new EditableGrid("project", {
+	this.editableGrid = new EditableGrid("demo", {
 		enableSort: true,
    	    tableLoaded: function() { datagrid.initializeGrid(this); },
 		modelChanged: function(rowIndex, columnIndex, oldValue, newValue, row) {
