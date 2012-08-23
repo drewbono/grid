@@ -59,7 +59,7 @@ $grid->addColumn('ps', 'Procurement Specialist', 'string', NULL, true);
 $grid->addColumn('pcn_date', 'PCN date', 'date');  
 $grid->addColumn('scale_up', 'Scale Up', 'boolean');
                                                                        
-$result = $mysqli->query('SELECT * FROM project LIMIT 100');
+$result = $mysqli->query('SELECT * FROM project LIMIT 1000');
 $mysqli->close();
 
 // send data to the browser
