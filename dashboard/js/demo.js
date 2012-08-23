@@ -35,11 +35,12 @@ function updateCellValue(editableGrid, rowIndex, columnIndex, oldValue, newValue
 		success: function (response) 
 		{ 
 			// reset old value if failed then highlight row
-			var success = onResponse ? onResponse(response) : (response == "ok" || !isNaN(parseInt(response))); // by default, a sucessfull reponse can be "ok" or a database id 
+			var success = onResponse ? onResponse(response) : (response == "ok" || !isNaN(parseInt(response))); 
+			// by default, a sucessfull reponse can be "ok" or a database id 
 			if (!success) editableGrid.setValueAt(rowIndex, columnIndex, oldValue);
 		    highlight(row.id, success ? "ok" : "error"); 
 		},
-		error: function(XMLHttpRequest, textStatus, exception) { alert("Ajax failure\n" + errortext); },
+		error: function(XMLHttpRequest, textStatus, exception) { echo("Ajax failure\n" + errortext); },
 		async: true
 	});
    
