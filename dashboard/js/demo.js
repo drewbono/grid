@@ -41,7 +41,7 @@ function updateCellValue(editableGrid, rowIndex, columnIndex, oldValue, newValue
 		    highlight(row.id, success ? "ok" : "error"); 
 		},
 		error: function(XMLHttpRequest, textStatus, exception) { echo("Ajax failure\n" + errortext); },
-		async: true
+		async: false
 	});
    
 }
@@ -67,7 +67,7 @@ DatabaseGrid.prototype.fetchGrid = function()  {
 };
 
 DatabaseGrid.prototype.initializeGrid = function(grid) {
-	grid.renderGrid("tablecontent", "project");
+	grid.renderGrid("tablecontent", "testgrid");
 };    
    
 
