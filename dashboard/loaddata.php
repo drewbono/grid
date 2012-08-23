@@ -53,7 +53,7 @@ $grid = new EditableGrid();
 *  Add columns. The first argument of addColumn is the name of the field in the databse. 
 *  The second argument is the label that will be displayed in the header
 */
-$grid->addColumn('id', 'Project ID', 'string', NULL, true); 
+$grid->addColumn('id', 'Project ID', 'string', NULL, false); 
 $grid->addColumn('project_name', 'Project Name', 'string');  
 $grid->addColumn('ps', 'Procurement Specialist', 'string');  
 $grid->addColumn('pcn_date', 'PCN date', 'date');  
