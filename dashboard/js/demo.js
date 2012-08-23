@@ -50,7 +50,7 @@ function updateCellValue(editableGrid, rowIndex, columnIndex, oldValue, newValue
 
 function DatabaseGrid() 
 { 
-	this.editableGrid = new EditableGrid("demo", {
+	this.editableGrid = new EditableGrid("project", {
 		enableSort: true,
    	    tableLoaded: function() { datagrid.initializeGrid(this); },
 		modelChanged: function(rowIndex, columnIndex, oldValue, newValue, row) {
