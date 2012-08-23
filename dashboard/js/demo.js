@@ -67,7 +67,7 @@ DatabaseGrid.prototype.fetchGrid = function()  {
 };
 
 DatabaseGrid.prototype.initializeGrid = function(grid) {
-	grid.renderGrid("tablecontent", "testgrid");
+	grid.renderGrid("tablecontent", "project");
 };    
    
 
